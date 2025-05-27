@@ -1,0 +1,12 @@
+State plan:
+
+page (carries state number) 
+    |
+    |-- 1. personal info
+    |
+    |-- 2. education
+    |
+    |-- 3. experience
+
+those options show up based on what number page is on 
+[view, setView] = stateKeyword(1) // start on 1
