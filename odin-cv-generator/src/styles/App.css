@@ -41,8 +41,22 @@
   color: #888;
 }
 
-.test {
-	background-color: red;
+.generatorContainer {
+	background-color: black;
 	width: 400px;
 	height: 600px;
+	color: white;
+	font-size: 20px;
+
+	padding: 16px 24px;
+	border-radius: 20px;
 }
+
+.generatorTitle {
+	font-size: 28px;	
+	font-weight: bold;
+}
+
+
+
+
