@@ -57,6 +57,42 @@
 	font-weight: bold;
 }
 
+.educationLevelContainer {
+	height: 400px; 
 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.educationInputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.educationLevelTitle {
+	margin: 0px;
+}
+
+.educationLevelButtons {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.gpaLevel > * {
+	padding: 0px 8px;
+}
+
+#userGpa {
+	width: 20px;
+}
+
+.next {
+	align-self: stretch;
+}
 
 
