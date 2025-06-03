@@ -1,7 +1,12 @@
 import '../styles/App.css'
 
-function Education() {
-	
+function Education({isActive, viewNext, viewPrev}) {
+    // Give invisible tag if not currently in view
+	let classNames = "section invisible";
+    if (isActive === 1) {
+        alert("hey"); 
+        classNames = "section"; 
+    }
 	return (
 		<>
 			<h2>Education</h2>
@@ -11,7 +16,7 @@ function Education() {
 						What is your highest level of education?
 					</h3>
 					<div className="educationLevelButtons">
-						<label for="selfEducated">Self Educated
+						<label htmlFor="selfEducated">Self Educated
 							
 							<input
 								type="radio"
@@ -19,21 +24,21 @@ function Education() {
 								name="education"
 							></input>
 						</label>
-						<label for="highschoolDiploma">Highschool Diploma
+						<label htmlFor="highschoolDiploma">Highschool Diploma
 							<input
 								type="radio"
 								id="highschoolDiploma"
 								name="education"
 							></input>
 						</label>
-						<label for="bachelorsDegree">Bachelors Degree
+						<label htmlFor="bachelorsDegree">Bachelors Degree
 							<input
 								type="radio"
 								id="bachelorsDegree"
 								name="education"
 							></input>
 						</label>
-						<label for="postGrad">Post Graduate
+						<label htmlFor="postGrad">Post Graduate
 							<input
 								type="radio"
 								id="postGrad"
@@ -42,13 +47,17 @@ function Education() {
 						</label>
 					</div>
 					<div className="gpaLevel">
-						<label for="userGpa">What is your GPA?</label>
+						<label htmlFor="userGpa">What is your GPA?</label>
 						<input
 							id="userGpa"
 						></input>
 					</div>
 				</div>
-				<button className="next" id="goToExperience">Next</button>
+				<button 
+                    className="next" 
+                    id="goToExperience"
+                    onClick={viewNext}
+                >Next</button>
 			</div>
 		</>
 	)

@@ -11,7 +11,11 @@ function App() {
 	return (
 		<div className="generatorContainer">
 			<p className="generatorTitle">CV Generator</p>
-			<Education />
+			<Education 
+                isActive = {view === 1}
+                switchNext = {() => setView(2)}
+                switchPrev = {() => setView(0)}
+            />
 		</div>
 	)
 }
