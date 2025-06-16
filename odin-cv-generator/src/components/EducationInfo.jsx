@@ -1,14 +1,16 @@
+import { useState } from 'react'
 import '../styles/App.css'
 
-function Education({isActive, viewNext, viewPrev}) {
+function Education({isActive, switchNext, switchPrev}) {
     // Give invisible tag if not currently in view
 	let classNames = "section invisible";
-    if (isActive === 1) {
+    if (isActive) {
         alert("hey"); 
         classNames = "section"; 
     }
+
 	return (
-		<>
+		<div className={classNames}>
 			<h2>Education</h2>
 			<div className="educationLevelContainer">
 				<div className="educationInputs">
@@ -56,10 +58,10 @@ function Education({isActive, viewNext, viewPrev}) {
 				<button 
                     className="next" 
                     id="goToExperience"
-                    onClick={viewNext}
+                    onClick={switchNext}
                 >Next</button>
 			</div>
-		</>
+		</div>
 	)
 }
 

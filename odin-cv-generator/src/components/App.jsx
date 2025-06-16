@@ -6,7 +6,7 @@ import Education from './EducationInfo.jsx'
 // import Experience from './PersonalInfo.jsx'
 
 function App() {
-	const [view, setView] = useState(0)
+	const [view, setView] = useState(1);
         
 	return (
 		<div className="generatorContainer">
