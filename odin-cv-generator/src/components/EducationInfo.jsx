@@ -5,7 +5,6 @@ function Education({isActive, switchNext, switchPrev}) {
     // Give invisible tag if not currently in view
 	let classNames = "section invisible";
     if (isActive) {
-        alert("hey"); 
         classNames = "section"; 
     }
 
