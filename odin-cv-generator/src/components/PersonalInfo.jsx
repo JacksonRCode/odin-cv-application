@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/App.css'
 
-function Education({isActive, switchNext, switchPrev}) {
+function Personal({isActive, switchNext, switchPrev}) {
     // Give invisible tag if not currently in view
 	let classNames = "section invisible";
     if (isActive) {
@@ -13,12 +13,40 @@ function Education({isActive, switchNext, switchPrev}) {
 			<h2>Personal Info</h2>
 			<div className="personalLevelContainer">
 				<div className="personalInputs">
-					<h3 className="personalLevelTitle">
-						What is your highest level of education?
-					</h3>
+                    <div className="inputContainer"> 
+                        <label 
+                            className="personalFirstName"
+                            htmlFor="firstName">First Name: 
+                        </label>
+                        <input 
+                            id="firstName"
+                            name="firstName"
+                        ></input>
+                    </div>
+                    <div className="inputContainer"> 
+                        <label 
+                            className="personalLastName"
+                            htmlFor="lastName">Last Name: 
+                        </label>
+                        <input 
+                            id="lastName"
+                            name="lastName"
+                        ></input>
+                    </div>
+                    <div className="inputContainer"> 
+                        <label 
+                            className="personalPhoneNumber"
+                            htmlFor="phoneNumber">Phone Number: 
+                        </label>
+                        <input 
+                            id="phoneNumber"
+                            name="phoneNumber"
+                        ></input>
+                    </div>
+                </div>
 				<button 
                     className="next" 
-                    id="goToExperience"
+                    id="goToEducation"
                     onClick={switchNext}
                 >Next</button>
 			</div>
@@ -26,4 +54,4 @@ function Education({isActive, switchNext, switchPrev}) {
 	)
 }
 
-export default Education
+export default Personal

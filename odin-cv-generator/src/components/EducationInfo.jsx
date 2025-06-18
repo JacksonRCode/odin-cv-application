@@ -55,6 +55,11 @@ function Education({isActive, switchNext, switchPrev}) {
 					</div>
 				</div>
 				<button 
+                    className="prev" 
+                    id="goToPersonal"
+                    onClick={switchPrev}
+                >Prev</button>
+				<button 
                     className="next" 
                     id="goToExperience"
                     onClick={switchNext}
